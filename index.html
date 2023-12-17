@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Apology Website</title>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide" id="slide1">
+                <div class="message" data-index="0">Hey Bubu..</div>
+                <div class="message hidden" data-index="1">I'm not good at many things.</div>
+                <div class="message hidden" data-index="2">But I think I'm decent in programming</div>
+                <div class="message hidden" data-index="3">So here is my Apology Website.</div>
+            </div>
+            <div class="slide" id="slide2">
+                <h3 id="puzzle-heading">Arrange in ascending order</h3>
+                <div id="puzzle-container"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+            </div>
+            
+            <div class="slide" id="slide3" style="background-color: #333;">
+                <div class="forgive-container">
+                    <div id="flower-container">
+                        <img src="./flowers.jpg" alt="Bouquet of flowers" id="flower" onclick="showPopup()">
+                        <p>Please click on the image</p>
+                    </div>
+                    <div class="forgive-popup" id="forgive-popup">
+                        <div class="popup-content">
+                            <p id="forgivenessMessage">Can you forgive me?</p>
+                            <button id="yesButton" onclick="forgive(true)">Yes</button>
+                            <button id="fineButton" style="display: none;" onclick="confirmPopup()">Fine</button>
+                            <button onclick="forgive(false)">No</button>
+                        </div>
+                    </div>
+                    <div class="forgive-popup" id="confirm-popup">
+                        <div class="popup-content">
+                            <p>Really? I'm forgiven?</p>
+                            <button onclick="forgive(true)">Yes</button>
+                            <button onclick="forgive(true)">Yes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="message3-container" id="messageContainer"></div>
+            </div>
+            <div class="slide" id="slide4" style="font-size: 24px;"><h2>Hope you liked it 😥</h2></div>
+        </div>
+        <button id="right-arrow">➡️</button>
+    </div>
+
+    <script src="./script.js"></script> 
+</body>
+</html>
